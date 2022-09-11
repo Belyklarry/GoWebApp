@@ -11,7 +11,7 @@ import (
 
 func getDirList(context *gin.Context) {
 
-	files, err := ioutil.ReadDir("/etc")
+	files, err := ioutil.ReadDir("/usr/bin")
     if err != nil {
         log.Fatal(err)
     }
@@ -36,6 +36,6 @@ func getDirList(context *gin.Context) {
 func main() {
     router := gin.Default()
     router.GET("/", getDirList)
-    router.Run("localhost:8080")
+    router.Run(":8080")
 }
 
