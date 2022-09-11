@@ -11,7 +11,7 @@ import (
 
 func getDirList(context *gin.Context) {
 
-	files, err := ioutil.ReadDir("/home/larry/SoftwareEngineering/TA-Sol2")
+	files, err := ioutil.ReadDir("/etc")
     if err != nil {
         log.Fatal(err)
     }
